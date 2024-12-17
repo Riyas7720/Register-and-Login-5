@@ -51,8 +51,7 @@ function processSignup(fullname, email, username, password) {
   var newUser = [fullname, email, username, password];
 
   // Add new user to the Google Sheet
-  var sheetID = " ";
-  var sheet = SpreadsheetApp.openById("sheetID").getSheetByName("Users");
+  var sheet = SpreadsheetApp.openById("1fuTR2vS1pLhj24miYa6SuDYL-PvWav2rgG9iY03gs4I").getSheetByName("Users");
   sheet.appendRow(newUser);
   response.success = true;
   return response;
@@ -66,8 +65,7 @@ function logoutUser() {
 
 // Function to get users from the Google Sheet
 function getUsers() {
-  var sheetID = " ";
-  var sheet = SpreadsheetApp.openById("sheetID").getSheetByName("Users");
+  var sheet = SpreadsheetApp.openById("1fuTR2vS1pLhj24miYa6SuDYL-PvWav2rgG9iY03gs4I").getSheetByName("Users");
   var data = sheet.getDataRange().getValues();
   var users = [];
 
